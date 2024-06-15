@@ -1,5 +1,10 @@
 # sd-adclick-aggregator
 
+## TODOs
+- Demo kafka / spark batch processing
+- Demo kafka / spark streaming processing
+- Demo kinesis / flink streaming processing
+
 ## Questions
 - What is an ad click aggregator?
 - What are the functional requirements for an ad click aggregator?
