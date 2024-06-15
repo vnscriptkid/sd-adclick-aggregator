@@ -1,0 +1,5 @@
+# Strategies
+- Identify Popular Ads: Implement a mechanism to track click volume and identify ads that are receiving a high number of clicks. This could be done using a monitoring system or metrics collected in real-time.
+- Generate Partition Key: For identified popular ads, generate a partition key by appending a random number to the AdId. For example, if AdId is 12345 and N is 10, generate keys like 12345:0, 12345:1, ..., 12345:9.
+- Modify Producer Logic: Update the logic in your Kafka producer to use the new partition key format for popular ads. This ensures that the clicks are distributed across multiple partitions.
+- Consumer Adaptation: Ensure that your Kafka consumers can handle the new partition key format. They should be able to aggregate data from the sub-partitions for further processing.
